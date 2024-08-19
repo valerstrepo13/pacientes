@@ -28,12 +28,12 @@ class Sistema:
         print('Paciente no encontrado.')
 
     def numPacientes(self):
-        print(f'El número de pacientes en el sistema: {len(self.__lista_pacientes)}')
+        print(f'El número de pacientes en el sistema es: {len(self.__lista_pacientes)}')
 
 miSistema = Sistema()
 
 while True:
-    opcion = int(input('1. Ingresar un nuevo paciente\n2. Ver el número de pacientes\n3. Ver los datos de un paciente\n4. Salir\n '))
+    opcion = int(input('1. Ingresar nuevo paciente\n2. Ver número de pacientes\n3. Ver datos de un paciente\n4. Salir\n '))
     
     if opcion == 1:
         miSistema.ingresarPaciente()
@@ -42,11 +42,11 @@ while True:
         miSistema.numPacientes()
         
     elif opcion == 3:
-        cedula = input('Ingrese la cédula del paciente: ')
+        cedula = input('Ingresar cédula paciente: ')
         miSistema.verDatos(cedula)
         
     elif opcion == 4:
-        print('Gracias por usar, saliendo del sistema... ')
+        print('Saliendo del sistema')
         break
         
     else: 
